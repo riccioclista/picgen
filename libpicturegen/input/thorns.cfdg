@@ -1,0 +1,25 @@
+CF::Background = [ hue @int|0|359@ sat @dbl|0|1@ b @dbl|0|1@ ]
+
+startshape THORNS2
+
+shape THORN
+{
+	CIRCLE [ h @int|0|359@ sat @dbl|0|1@ a @dbl|0|1@ b @dbl|0|1@ ]
+	THORN [ s 0.95 y 0.3 ]
+}
+
+shape THORNS
+{
+	THORN []
+	THORNS [s 0.5 r -85 y 6.2 ]
+	THORNS [s 0.5 r 85 y 6.2 ]
+	THORNS [s 0.5 y 6.2 ]
+}
+
+shape THORNS2
+{
+	THORNS [r 45]
+	THORNS [r 135]
+	THORNS [r 225]
+	THORNS [r 315]
+}

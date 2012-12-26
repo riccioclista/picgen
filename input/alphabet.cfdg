@@ -1,0 +1,43 @@
+startshape SEED
+import i_pix.cfdg
+
+shape SEED
+rule { LEFTCURVELETTER [] }
+rule { RIGHTCURVELETTER [] }
+
+shape RIGHTCURVELETTER
+rule {THING [] RIGHTCURVELETTER [x 2 rotate -9 size 0.98]}
+rule {THING [] RIGHTCURVELETTER [x 2 rotate -9 size 0.97]}
+rule {THING [] RIGHTCURVELETTER [x 2 rotate -9 size 0.97]}
+rule {THING [] RIGHTCURVELETTER [x 2 rotate -9 size 0.97]}
+rule {THING [] RIGHTCURVELETTER [x 2 rotate -9 size 0.97]}
+rule {THING [] RIGHTCURVELETTER [x 2 rotate -9 size 0.99]}
+rule {THING [] RIGHTCURVELETTER [x 2 rotate -9 size 0.99]}
+rule {THING [] RIGHTCURVELETTER [x 2 rotate -9 size 0.98]}
+rule {THING [] RIGHTCURVELETTER [x 2 rotate -9 size 0.99]}
+rule {LEFTCURVELETTER []}
+rule {MAYBESPLIT []}
+
+shape LEFTCURVELETTER
+rule {THING [] LEFTCURVELETTER [x 2 rotate 15 size 0.97]}
+rule {THING [] LEFTCURVELETTER [x 2 rotate 15 size 0.97]}
+rule {THING [] LEFTCURVELETTER [x 2 rotate 15 size 0.96]}
+rule {THING [] LEFTCURVELETTER [x 2 rotate 15 size 0.96]}
+rule {RIGHTCURVELETTER []}
+rule {RIGHTCURVELETTER []}
+rule {MAYBESPLIT []}
+rule {MAYBESPLIT []}
+
+
+shape MAYBESPLIT
+rule {LEFTCURVELETTER []}
+rule {RIGHTCURVELETTER []}
+rule {
+     LEFTCURVELETTER [y 1.1]
+     RIGHTCURVELETTER [y -1.1]
+}
+
+shape THING
+{ RANDOM_LETTER_5by5 [] }
+
+

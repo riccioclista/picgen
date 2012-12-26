@@ -1,0 +1,10 @@
+*~
+
+*.userprefs
+*.suo
+
+*.designer.cs
+
+bin/
+obj/
+/out/

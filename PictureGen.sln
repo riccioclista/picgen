@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureGen", "PictureGen\PictureGen.csproj", "{2360804B-6B3B-46E2-9A66-1921B22A7E59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libpicturegen", "libpicturegen\libpicturegen.csproj", "{24B1C778-5374-4F1F-892F-4EDC96989E71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2360804B-6B3B-46E2-9A66-1921B22A7E59}.Debug|x86.ActiveCfg = Debug|x86
+		{2360804B-6B3B-46E2-9A66-1921B22A7E59}.Debug|x86.Build.0 = Debug|x86
+		{2360804B-6B3B-46E2-9A66-1921B22A7E59}.Release|x86.ActiveCfg = Release|x86
+		{2360804B-6B3B-46E2-9A66-1921B22A7E59}.Release|x86.Build.0 = Release|x86
+		{24B1C778-5374-4F1F-892F-4EDC96989E71}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{24B1C778-5374-4F1F-892F-4EDC96989E71}.Debug|x86.Build.0 = Debug|Any CPU
+		{24B1C778-5374-4F1F-892F-4EDC96989E71}.Release|x86.ActiveCfg = Release|Any CPU
+		{24B1C778-5374-4F1F-892F-4EDC96989E71}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = PictureGen\PictureGen.csproj
+	EndGlobalSection
+EndGlobal
