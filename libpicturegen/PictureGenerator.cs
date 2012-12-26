@@ -38,7 +38,7 @@ namespace PictureGen
 
 			inputCfdgPaths = new List<string> ();
 			foreach (var file in Directory.GetFiles ("input")) {
-				if (!file.StartsWith ("i_"))
+				if (!Path.GetFileName (file).StartsWith ("i_"))
 					inputCfdgPaths.Add (file);
 			}
 			Size = 500;
