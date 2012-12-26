@@ -1,0 +1,33 @@
+CF::Background = [ hue @int|0|359@ sat @dbl|0|1@ b @dbl|0|1@ ]
+startshape SEED1
+
+shape SEED1
+rule {
+ SQUARE[]
+ SEED1 [y 1.0 size 0.99 rotate 1.5 brightness 0.02]
+}
+
+rule 0.05 {SEED2 []}
+
+shape SEED2
+{
+ SQUARE[]
+ SEED2 [y 1.0 size 0.99 rotate -1.5]
+}
+
+shape SEED1
+rule 0.05 {
+ SQUARE[]
+ SEED2 [y 1.0 size 0.99 rotate 1.5]
+ SEED1 [y 1.0 size 0.6 rotate -60]
+ SEED2 [y 1.0 size 0.5 rotate 60]
+}
+
+shape SEED2
+rule 0.05 {
+ SQUARE[]
+ SEED1 [y 1.0 size 0.99 rotate 1.5]
+ SEED2 [y 1.0 size 0.6 rotate -60]
+ SEED1 [y 1.0 size 0.5 rotate 60]
+}
+

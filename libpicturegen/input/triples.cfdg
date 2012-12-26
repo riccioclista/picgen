@@ -1,0 +1,87 @@
+CF::Background = [ hue @int|0|359@ sat @dbl|0|1@ b @dbl|0|1@ ]
+startshape TRIPLES
+
+shape TRIPLES
+{
+	LINES [ r 0 ]
+	LINES [ r 120 ]
+	LINES [ r -120 ]
+}	
+
+shape LINES
+{
+	UTRIANGLE [ y 0.5 ]
+	LINES [ r 20 b 0.15 y 0.75 x -0.4330125  s 0.754877 ]
+	LINER [ r -60 b 0.15 y 0.75 x 0.4330125  s 0.754877 ]
+ }
+shape LINER
+rule { LINER15 [ ] }
+rule { LINER12 [ ] }
+rule { LINER9 [ ] }
+rule { LINER6 [ ] }
+shape LINER15
+{
+	UTRIANGLE [ y 0.5 ]
+	LINER [ r -15 b 0.02
+		y 0.75 x 0.4330125  s 0.754877 ]
+ }
+shape LINER12
+{
+	UTRIANGLE [ y 0.5 ]
+	LINER [ r -12 b 0.02
+		y 0.75 x 0.4330125  s 0.754877 ]
+ }
+shape LINER9
+{
+	UTRIANGLE [ y 0.5 ]
+	LINER [ r -9 b 0.02
+		y 0.75 x 0.4330125  s 0.754877 ]
+ }
+shape LINER6
+{
+	UTRIANGLE [ y 0.5 ]
+	LINER [ r -6 b 0.02
+		y 0.75 x 0.4330125  s 0.754877 ]
+ }
+
+// 0.754877 is the solution to
+// x^2 + x^3 = 1
+// this allows double backed
+// triangles to exactly line up!
+
+
+shape TESTU
+{
+	TESTU_background [ ]
+	UTRIANGLE [ ]
+	UTRIANGLE [ y 0.5 x -0.866025 b 0.5 r 60 ]
+	UTRIANGLE [ y 0.5 x +0.866025 b 0.5 r 60 ]
+}
+shape TESTU_background
+{
+	CIRCLE [  b 0.5 ]
+	CIRCLE  [ y -1 ]
+	CIRCLE [ y -0.5 x -0.866025 ]
+	CIRCLE [ y -0.5 x 0.866025 ]
+	CIRCLE [ y 0.5 x -0.866025 ]
+	CIRCLE [ y 0.5 x 0.866025 ]
+	CIRCLE  [ y 1 ]
+}
+
+shape UTRIANGLE
+{
+	TRIANGLE [ r 42.5 s 0.525 ]
+}
+shape TRIANGLE
+{ 
+	ARM [ r 0 ]
+	ARM [ r 120 ]
+	ARM [ r -120 ]
+} 
+
+shape ARM
+{
+	CIRCLE [ ]
+	ARM [ y 0.1 s 0.9 r 2 ]
+}
+

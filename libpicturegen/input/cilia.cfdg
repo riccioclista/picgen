@@ -1,0 +1,107 @@
+CF::Background = [ hue @int|0|359@ sat @dbl|0|1@ b @dbl|0|1@ ]
+startshape LINES
+
+shape TRIPLES
+{
+	LINES [ r 0 ]
+	LINES [ r 120 ]
+	LINES [ r -120 ]
+}	
+
+shape LINES
+{
+	LINER [ ]
+	LINER [ x 2 ]
+	LINER [ x 4 ]
+	LINER [ x 6 ]
+	LINER [ x 8 ]
+	LINES [ x 0.7 y 1.5 b 0.1 s 0.8 ]
+ }
+
+shape LINER
+rule { LINER1 [ ] }
+rule { LINER2 [ ] }
+rule { LINER3 [ ] }
+rule { LINER4 [ ] }
+rule { LINER5 [ ] }
+rule { LINER6 [ ] }
+
+shape LINER1
+{
+	UTRIANGLE [ y 0.5 ]
+	LINER1 [ r -1 b 0.02
+		y 0.75 x 0.4330125
+		 s 0.97 ]
+ }
+shape LINER2
+{
+	UTRIANGLE [ y 0.5 ]
+	LINER2 [ r -2 b 0.02
+		y 0.75 x 0.4330125
+		 s 0.97 ]
+ }
+shape LINER3
+{
+	UTRIANGLE [ y 0.5 ]
+	LINER3 [ r -3 b 0.02
+		y 0.75 x 0.4330125
+		 s 0.97 ]
+ }
+shape LINER4
+{
+	UTRIANGLE [ y 0.5 ]
+	LINER4 [ r 1 b 0.02
+		y 0.75 x 0.4330125
+		 s 0.97 ]
+ }
+shape LINER5
+{
+	UTRIANGLE [ y 0.5 ]
+	LINER5 [ r 2 b 0.02
+		y 0.75 x 0.4330125
+		 s 0.97 ]
+ }
+shape LINER6
+{
+	UTRIANGLE [ y 0.5 ]
+	LINER6 [ r 3 b 0.02
+		y 0.75 x 0.4330125
+		 s 0.97 ]
+ }
+
+shape LINER1
+rule .1 { LINER [ ] }
+shape LINER2
+rule .1 { LINER [ ] }
+shape LINER3
+rule .1 { LINER [ ] }
+shape LINER4
+rule .1 { LINER [ ] }
+shape LINER5
+rule .1 { LINER [ ] }
+shape LINER6
+rule .1 { LINER [ ] }
+
+// 0.754877 is the solution to
+// x^2 + x^3 = 1
+// this allows double backed
+// triangles to exactly line up!
+
+
+shape UTRIANGLE
+{
+	TRIANGLE [ r 42.5 s 0.525 ]
+}
+shape TRIANGLE
+{ 
+	ARM [ r 0 ]
+	ARM [ r 120 ]
+	ARM [ r -120 ]
+} 
+
+shape ARM
+{
+	CIRCLE [ ]
+	ARM [ y 0.1 s 0.9 r 2 ]
+}
+

@@ -1,0 +1,73 @@
+CF::Background = [ hue @int|0|359@ sat @dbl|0|1@ b @dbl|0|1@ ]
+startshape POINT
+
+shape POINT
+rule {
+     POINT [rotate 43.345223]
+     UNIT [ y 100 size 1]
+}
+
+rule {
+     POINT [rotate 73.9 size 0.99] UNIT [ y 100 size 0.7]
+}
+rule {
+     POINT [rotate 73.9 size 0.99] UNIT [ y 100 size 0.3]
+}
+rule 2 {
+     POINT [rotate 73.9 size 0.99] UNIT [ y 100 size 0.1]
+}
+
+shape UNIT
+{ SEED [size 10]}
+
+
+shape SEED
+rule {BRANCH []}
+rule {BRANCH [rotate 1]}
+rule {BRANCH [rotate -1]}
+rule {BRANCH [rotate 2]}
+rule {BRANCH [rotate -2]}
+rule {FORK []}
+
+shape BRANCH
+rule {LEFTBRANCH [flip 90]}
+rule {LEFTBRANCH []}
+
+shape LEFTBRANCH
+rule {BLOCK [] LEFTBRANCH [y 0.885 rotate 0.1 size 0.99]}
+rule {BLOCK [] LEFTBRANCH [y 0.885 rotate 0.2 size 0.99]}
+rule {BLOCK [] LEFTBRANCH [y 0.885 rotate 0.1 size 0.99]}
+rule {BLOCK [] LEFTBRANCH [y 0.885 rotate 0.2 size 0.99]}
+rule {BLOCK [] LEFTBRANCH [y 0.885 rotate 0.1 size 0.99]}
+rule {BLOCK [] LEFTBRANCH [y 0.885 rotate 0.2 size 0.99]}
+rule {BLOCK [] LEFTBRANCH [y 0.885 rotate 0.1 size 0.99]}
+rule {BLOCK [] LEFTBRANCH [y 0.885 rotate 0.2 size 0.99]}
+rule {BLOCK [] LEFTBRANCH [y 0.885 rotate 4 size 0.99]}
+rule {BLOCK [] FORK []}
+
+
+shape BLOCK
+{
+     SQUARE [rotate 1]
+     SQUARE [rotate -1]
+     SQUARE []
+}
+
+shape FORK
+rule {
+     BRANCH [ ]
+     BRANCH [size 0.5 rotate 40]
+}
+rule {
+     BRANCH [ ]
+     BRANCH [size 0.5 rotate -40]
+}
+rule {
+     BRANCH [size 0.5 rotate -20]
+     BRANCH [ ]
+}
+rule {
+     BRANCH [size 0.7 y 0.1 rotate 20]
+     BRANCH [size 0.7 y 0.1 rotate -20]
+}
+

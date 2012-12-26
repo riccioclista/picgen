@@ -1,0 +1,20 @@
+CF::Background = [ hue @int|0|359@ sat @dbl|0|1@ b @dbl|0|1@ ]
+startshape SNOWFLAKE
+
+shape SNOWFLAKE
+{
+	loop 6 [r 60] SPIKE []
+}
+
+shape SPIKE
+rule {
+	SQUARE []
+	SPIKE [ y 0.95 s 0.97 ]
+}
+rule 0.03 {
+	SQUARE []
+	SPIKE [ r 60 ]
+	SPIKE [ r -60 ]
+	SPIKE [ y 0.95 s 0.97  ]
+}
+

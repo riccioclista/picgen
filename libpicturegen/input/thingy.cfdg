@@ -1,0 +1,16 @@
+CF::Background = [ hue @int|0|359@ sat @dbl|0|1@ b @dbl|0|1@ ]
+startshape THINGY
+
+shape THINGY
+{
+   MINICIRCLE []
+   THINGY [x 1 size 0.5]
+   THINGY [x -1 size 0.5]
+   THINGY [y 1 size 0.5]
+   THINGY [y -1 size 0.5]
+}
+
+shape MINICIRCLE
+{
+   CIRCLE [ size 0.5]
+}

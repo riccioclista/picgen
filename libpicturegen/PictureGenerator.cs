@@ -35,9 +35,12 @@ namespace PictureGen
 		public PictureGenerator ()
 		{
 			rand = new Random ((int)DateTime.Now.Ticks);
-			inputCfdgPaths = new List<string> {
-				"input" + Path.DirectorySeparatorChar + "thorns.cfdg"
-			};
+
+			inputCfdgPaths = new List<string> ();
+			foreach (var file in Directory.GetFiles ("input")) {
+				if (!file.StartsWith ("i_"))
+					inputCfdgPaths.Add (file);
+			}
 		}
 
 		public byte [] Next ()
