@@ -41,7 +41,10 @@ namespace PictureGen
 				if (!file.StartsWith ("i_"))
 					inputCfdgPaths.Add (file);
 			}
+			Size = 500;
 		}
+
+		public int Size { get; set; }
 
 		public byte [] Next ()
 		{
@@ -50,7 +53,7 @@ namespace PictureGen
 			var cfdgPath = inputCfdgPaths [idx];
 
 			// Setup cfdg process info
-			var psi = new ProcessStartInfo ("cfdg", "-s500 -");
+			var psi = new ProcessStartInfo ("cfdg", "-s" + Size + " -");
 			psi.UseShellExecute = false;
 			psi.RedirectStandardInput = true;
 			psi.RedirectStandardOutput = true;
@@ -163,14 +166,6 @@ namespace PictureGen
 		{
 			var length = source.Length > 5 ? 5 : source.Length;
 			return source.Substring (0, length);
-		}
-
-		public string Generate (string cfdgSourceFile)
-		{
-			var outFileName = Path.GetFileNameWithoutExtension (cfdgSourceFile) + ".png";
-			var p = Process.Start ("cfdg", "-s500 " + cfdgSourceFile + " " + outFileName);
-			p.WaitForExit ();
-			return outFileName;
 		}
 
 		List<string> inputCfdgPaths;
